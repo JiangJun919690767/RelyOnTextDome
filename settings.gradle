@@ -1,2 +1,8 @@
 include ':app'
 include ':libutils'
+include ':libsaar'
+
+include ':libsaar',
+        ':libsaar:heytapmspaar',
+        ':libsaar:vivopushaar',
+        ':libsaar:audioswitchaar'
