@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.blankj.utilcode.util.KeyboardUtils;
+import com.heytap.msp.push.service.DataMessageCallbackService;
+import com.vivo.push.IPushActionListener;
+import com.vivo.push.PushClient;
+import com.xiaomi.mipush.sdk.MiPushClient;
 
 public class MainActivity extends AppCompatActivity {
 
