@@ -3,19 +3,18 @@ apply plugin: 'com.github.dcendents.android-maven'
 group = 'com.github.RongXinSdk'
 
 android {
-    compileSdk 30
+    compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        minSdk 21
-        targetSdk 30
+        minSdkVersion 21
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
-
 
 
     buildTypes {
@@ -49,8 +48,7 @@ dependencies {
     api files('libs\\MiPush_SDK_Client_3_2_2.jar')
 
 
-    api project(path: ':libsOtherNew:vivopushaar')
-    api project(path: ':libsOtherNew:audioswitchaar')
-    api project(path: ':libsOtherNew:heytapmspaar')
+    api(name: 'com.heytap.msp', ext: 'aar')
+    api(name: 'vivo_pushSDK_v3.0.0.3_483', ext: 'aar')
     api 'com.blankj:utilcodex:1.30.6'
 }

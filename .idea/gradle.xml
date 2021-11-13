@@ -13,10 +13,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/libsOtherNew" />
-            <option value="$PROJECT_DIR$/libsOtherNew/audioswitchaar" />
-            <option value="$PROJECT_DIR$/libsOtherNew/heytapmspaar" />
-            <option value="$PROJECT_DIR$/libsOtherNew/vivopushaar" />
             <option value="$PROJECT_DIR$/libutils" />
           </set>
         </option>

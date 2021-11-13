@@ -2,7 +2,3 @@ include ':app'
 include ':libutils'
 
 
-include ':libsOtherNew',
-        ':libsOtherNew:heytapmspaar',
-        ':libsOtherNew:vivopushaar',
-        ':libsOtherNew:audioswitchaar'
