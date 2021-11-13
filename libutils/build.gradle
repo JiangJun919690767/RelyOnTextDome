@@ -81,6 +81,8 @@ afterEvaluate {
             release(MavenPublication) {
                 // Applies the component for the release build variant.
                 from components.release
+
+                group = 'com.github.RongXinSdk'
                 //上次源码任务
                 artifact(tasks["sourcesJar"])
 
