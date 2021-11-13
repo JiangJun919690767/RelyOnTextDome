@@ -1,7 +1,7 @@
 include ':app'
 include ':libutils'
 
-include ':libaar'
+
 include ':libsOtherNew',
         ':libsOtherNew:heytapmspaar',
         ':libsOtherNew:vivopushaar',

@@ -1,2 +1,4 @@
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.RongXinSdk'
 configurations.maybeCreate("default")
 artifacts.add("default",file('Yuntx_Plugin_AudioSwitch_v1.0.0.aar'))
