@@ -49,8 +49,8 @@ dependencies {
     api files('libs\\MiPush_SDK_Client_3_2_2.jar')
 
 
-    api project(path: ':libsaar:vivopushaar')
-    api project(path: ':libsaar:audioswitchaar')
-    api project(path: ':libsaar:heytapmspaar')
+    api project(path: ':libsOtherNew:vivopushaar')
+    api project(path: ':libsOtherNew:audioswitchaar')
+    api project(path: ':libsOtherNew:heytapmspaar')
     api 'com.blankj:utilcodex:1.30.6'
 }
