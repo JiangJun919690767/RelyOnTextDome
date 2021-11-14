@@ -82,7 +82,9 @@ afterEvaluate {
                 // Applies the component for the release build variant.
                 from components.release
 
-                group = 'com.github.RongXinSdk'
+                group = 'com.github.TextDome'
+                artifactId = 'libutils'
+                version = 'v0.0.15'
                 //上次源码任务
                 artifact(tasks["sourcesJar"])
 
