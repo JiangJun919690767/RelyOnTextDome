@@ -38,7 +38,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api fileTree(include: ['*.jar','*.aar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
     testImplementation 'junit:junit:4.+'
@@ -46,74 +46,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
 
-    api files('libs\\MiPush_SDK_Client_3_2_2.jar')
-
-
-    api (name: 'com.heytap.msp', ext: 'aar')
-    api (name: 'vivo_pushSDK_v3.0.0.3_483', ext: 'aar')
-    api 'com.blankj:utilcodex:1.30.6'
-}
-apply plugin: 'maven-publish'
-
-
-//生成源码jar包task
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    archiveClassifier.set("sources")
-}
-
-//等待构建完成
-afterEvaluate {
-    publishing {
-        repositories {
-            maven {
-                name = "release"
-                url = "https://github.com/JiangJun919690767/RelyOnTextDome.git"
-                credentials {
-                    username = "919690767@qq.com"
-                    password = "jiangjun0410"
-                }
-            }
-        }
-
-        publications {
-            // Creates a Maven publication called "release".
-            release(MavenPublication) {
-                // Applies the component for the release build variant.
-                from components.release
-
-                group = 'com.github.TextDome'
-                artifactId = 'libutils'
-                version = 'v0.0.15'
-                //上次源码任务
-                artifact(tasks["sourcesJar"])
-
-                pom {
-                    name = 'release'
-                    description = 'android text dome'
-                    url = 'https://github.com/JiangJun919690767/RelyOnTextDome.git'
-                    licenses {
-                        //证书说明
-                        license {
-                            name = 'xxx.'
-                            url = 'null'
-                        }
-                    }
-                    developers {
-                        developer {
-                            id = 'jiang'
-                            name = 'text done'
-                            email = '919690767@qq.com'
-                        }
-                    }
-                    //软件配置管理
-                    scm {
-                        connection = 'https://github.com/JiangJun919690767/RelyOnTextDome'
-                        developerConnection = 'https://github.com/JiangJun919690767/RelyOnTextDome.git'
-                        url = 'https://github.com/JiangJun919690767'
-                    }
-                }
-            }
-        }
-    }
+//    api files('libs\\MiPush_SDK_Client_3_2_2.jar')
+//    api (name: 'com.heytap.msp', ext: 'aar')
+//    api (name: 'vivo_pushSDK_v3.0.0.3_483', ext: 'aar')
+//    api 'com.blankj:utilcodex:1.30.6'
 }
