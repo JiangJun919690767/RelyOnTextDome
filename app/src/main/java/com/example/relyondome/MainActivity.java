@@ -5,11 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.blankj.utilcode.util.KeyboardUtils;
-import com.heytap.msp.push.service.DataMessageCallbackService;
-import com.vivo.push.IPushActionListener;
-import com.vivo.push.PushClient;
-import com.xiaomi.mipush.sdk.MiPushClient;
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.google.gson.Gson;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.but).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                KeyboardUtils.showSoftInput();
+                Gson gson = new Gson();
+                ARouter.init(getApplication());
             }
         });
     }

@@ -29,17 +29,10 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-
-    repositories {
-        flatDir {
-            dirs 'libs'
-        }
-    }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    api fileTree(include: ['*.aar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
     testImplementation 'junit:junit:4.+'
@@ -47,10 +40,48 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
 
-    api files('libs\\MiPush_SDK_Client_3_2_2.jar')
+    //视频缓存
+    api "${SUPPORTDEPS.videocache}"
+    api "${SUPPORTDEPS.SmartRefreshLayout}"
+    api "${SUPPORTDEPS.SmartRefreshHeader}"
 
 
-//    api (name: 'com.heytap.msp', ext: 'aar')
-//    api (name: 'vivo_pushSDK_v3.0.0.3_483', ext: 'aar')
-    api 'com.blankj:utilcodex:1.30.6'
+    api "${SUPPORTDEPS.kotlin_stdlib_jdk8}"
+    api "${SUPPORTDEPS.recyclerview}"
+    api "${SUPPORTDEPS.glide}"
+    api "${SUPPORTDEPS.glide_transfor}"
+    api "${SUPPORTDEPS.pinyin4j}"
+    api "${SUPPORTDEPS.gson}"
+    api "${SUPPORTDEPS.jsoup}"
+    api "${SUPPORTDEPS.rxjava}"
+    api "${SUPPORTDEPS.rxbinding}"
+    api "${SUPPORTDEPS.rxandroid}"
+    api "${SUPPORTDEPS.fastjson}"
+    api "${SUPPORTDEPS.subsamplingImage}"
+    api "${SUPPORTDEPS.rxlifecycle}"
+    api "${SUPPORTDEPS.rxlifecycle_components}"
+    api "${SUPPORTDEPS.arouter_api}"
+    api "${SUPPORTDEPS.wcdb}"
+    api "${SUPPORTDEPS.okhttpLogging}"
+    api "${SUPPORTDEPS.retrofit2}"
+    api "${SUPPORTDEPS.retrofit2Adapter}"
+    api "${SUPPORTDEPS.retrofit2Gson}"
+    api "${SUPPORTDEPS.rxlifecycle}"
+    api "${SUPPORTDEPS.rxlifecycle_components}"
+    api "${SUPPORTDEPS.eventbus}"
+    api "${SUPPORTDEPS.constraint_layout}"
+    api "${SUPPORTDEPS.multidex}"
+    api "${SUPPORTDEPS.facebook}"
+    // HUAWEI push sdk
+    api "${SUPPORTDEPS.huawei_push}"
+    api "${SUPPORTDEPS.huawei_base}"
+
+
+    api "${SUPPORTDEPS.fresco}"
+    api "${SUPPORTDEPS.fresco_gif}"
+    api "${SUPPORTDEPS.TencentLocationSdk}"
+
+    annotationProcessor "${SUPPORTDEPS.glide_annotationProcessor}"
+    annotationProcessor "${SUPPORTDEPS.arouter_compiler}"
+
 }

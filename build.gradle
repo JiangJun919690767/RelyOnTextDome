@@ -13,6 +13,109 @@ buildscript {
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
+
+
+    project.ext {
+        buildToolsVersion = "29.0.3"
+        compileSdkVersion = 29
+        minSdkVersion = 19
+        targetSdkVersion = 29
+        versionName = "5.8.1"
+        versionCode = 47
+//        supportVersion = "28.0.0"
+        SUPPORTDEPS = [
+                // ------------- AndroidX -------------
+                supportV4                : "androidx.legacy:legacy-support-v4:1.0.0",
+                appcompatV7              : "androidx.appcompat:appcompat:1.3.1",
+                annotations              : "androidx.annotation:annotation:1.2.0",
+                design                   : "com.google.android.material:material:1.0.0-rc01",
+                cardview                 : "androidx.cardview:cardview:1.0.0",
+                recyclerview             : "androidx.recyclerview:recyclerview:1.2.1",
+                constraint_layout        : 'androidx.constraintlayout:constraintlayout:2.1.0',
+                multidex                 : 'androidx.multidex:multidex:2.0.1',
+                // ------------- 网络请求 -------------
+                okhttpLogging            : "com.squareup.okhttp3:logging-interceptor:3.9.1",
+                retrofit2                : "com.squareup.retrofit2:retrofit:2.4.0",
+                retrofit2Gson            : "com.squareup.retrofit2:converter-gson:2.4.0",
+                // ------------- 图片加载 -------------
+                fresco                   : "com.facebook.fresco:fresco:0.11.0",
+                fresco_gif               : "com.facebook.fresco:animated-gif:0.12.0",
+                glide                    : "com.github.bumptech.glide:glide:4.11.0",
+                glide_annotationProcessor: 'com.github.bumptech.glide:compiler:4.11.0',
+
+                // ------------- RxAndroid -------------
+                rxjava                   : "io.reactivex.rxjava2:rxjava:2.2.5",
+                rxandroid                : "io.reactivex.rxjava2:rxandroid:2.1.0",
+                retrofit2Adapter         : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
+
+                // ------------- json解析 -------------
+                fastjson                 : "com.alibaba:fastjson:1.2.70",
+                gson                     : "com.google.code.gson:gson:2.8.2",
+
+                //---------------组件通信--------------------
+                eventbus                 : 'org.greenrobot:eventbus:3.2.0',
+                //---------------------------------jsoup抓取网页HTML解析数据------------https://www.jianshu.com/p/54d100829913
+                jsoup                    : 'org.jsoup:jsoup:1.12.1',
+
+                //-----------------bugly--热更新----渠道打包
+                bugly_crashreport        : "com.tencent.bugly:crashreport:latest.release",
+                bugly_nativecrashreport  : "com.tencent.bugly:nativecrashreport:latest.release",
+
+                //--------------------刷新框架-------------------------  福生1.0.3
+                SmartRefreshLayout       : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0",
+                SmartRefreshHeader       : "com.scwang.smartrefresh:SmartRefreshHeader:1.1.0",
+                //zxing
+                zxing                    : "com.google.zxing:core:3.2.1",
+
+                //Joda-Time
+                joda_time                : "joda-time:joda-time:2.10.1",
+
+
+                //--------------------福生没有的依赖-------------------------
+                junit                    : "junit:junit:4.12",
+                supportV13               : "androidx.legacy:legacy-support-v13:1.0.0",
+                //push
+                huawei_push              : "com.huawei.android.hms:push:2.6.3.301",
+                huawei_base              : "com.huawei.android.hms:base:2.6.3.301",
+                meizu_push               : "com.meizu.flyme.internet:push-internal:3.8.3",
+                //RxBinding2
+                rxbinding                : "com.jakewharton.rxbinding2:rxbinding:2.0.0",
+                //音视频缓存
+                videocache               : "com.danikula:videocache:2.7.0",
+                //pinyin
+                pinyin4j                 : "com.belerweb:pinyin4j:2.5.1",
+                //图片加载
+                subsamplingImage         : "com.davemorrissey.labs:subsampling-scale-image-view:3.6.0",
+                //高斯模糊处理
+                glide_transfor           : "jp.wasabeef:glide-transformations:4.1.0",
+                wcdb                     : "com.tencent.wcdb:wcdb-android:1.0.6.2",
+                tablayout                : "io.github.h07000223:flycoTabLayout:3.0.0",
+                material                 : 'com.github.rey5137:material:1.3.0',
+                //阿里路由
+                arouter_api              : 'com.alibaba:arouter-api:1.5.2',
+                arouter_compiler         : 'com.alibaba:arouter-compiler:1.5.2',
+                wechat_mta               : "com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.4.0",
+                Luban                    : 'top.zibin:Luban:1.1.8',
+                facebook                 : "com.facebook.stetho:stetho:1.5.0",
+                gms_maps                 : "com.google.android.gms:play-services-maps:15.0.1",
+                gms_location             : "com.google.android.gms:play-services-location:15.0.1",
+                rxlifecycle              : "com.trello.rxlifecycle3:rxlifecycle:3.0.0",
+                rxlifecycle_components   : "com.trello.rxlifecycle3:rxlifecycle-components:3.0.0",
+                kotlin_stdlib_jdk8       : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version",
+                amitshekhar              : "com.amitshekhar.android:debug-db:1.0.0",
+                jsonwebtoken             : "io.jsonwebtoken:jjwt:0.9.1",
+                google_firebase          : "com.google.firebase:firebase-messaging:17.6.0",
+                TencentLocationSdk       : "com.tencent.map.geolocation:TencentLocationSdk-openplatform:7.2.6",
+                glance                   : "com.guolindev.glance:glance:1.1.0",
+                rxpermissions            : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar",
+                eventbus_processor       : "org.greenrobot:eventbus-annotation-processor:3.2.0",
+                lifecycle                : "androidx.lifecycle:lifecycle-livedata:2.0.0",
+                FlycoTabLayout_Lib       : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
+                android_gif              : "pl.droidsonroids.gif:android-gif-drawable:1.2.2"
+
+        ]
+
+    }
 }
 
 allprojects {
@@ -20,11 +123,6 @@ allprojects {
         google()
         mavenCentral()
         maven { url 'https://jitpack.io' }
-
-        flatDir {
-            dirs 'libs'
-            dirs project(':libutils').file('libs')
-        }
     }
 }
 task clean(type: Delete) {
