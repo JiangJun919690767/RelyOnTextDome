@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        minSdk 21
+        minSdk 19
         targetSdk 30
         versionCode 1
         versionName "1.0"
@@ -86,6 +86,10 @@ dependencies {
     api "${SUPPORTDEPS.fresco}"
     api "${SUPPORTDEPS.fresco_gif}"
     api "${SUPPORTDEPS.TencentLocationSdk}"
+    api "${SUPPORTDEPS.zxing}"
+    api "${SUPPORTDEPS.tablayout}"
+
+
 
     annotationProcessor "${SUPPORTDEPS.glide_annotationProcessor}"
     annotationProcessor "${SUPPORTDEPS.arouter_compiler}"
