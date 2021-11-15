@@ -45,11 +45,11 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-//    api(name:'Yuntx_Android_Plugin_Common_v5.8.1.1r', ext:'aar')
-//    api(name:'Yuntx_Android_Plugin_Conference_v5.8.1.1r', ext:'aar')
-//    api(name:'Yuntx_Android_Plugin_MarsXlog_v5.8.1.1r', ext:'aar')
-//    api(name:'Yuntx_Android_Plugin_YHC_Wbss_v5.8.1.1r', ext:'aar')
-//    api(name:'Yuntx_Android_Plugin_YHC_Common_v5.8.1.1r', ext:'aar')
+    api(name:'Yuntx_Android_Plugin_Common_v5.8.1.1r', ext:'aar')
+    api(name:'Yuntx_Android_Plugin_Conference_v5.8.1.1r', ext:'aar')
+    api(name:'Yuntx_Android_Plugin_MarsXlog_v5.8.1.1r', ext:'aar')
+    api(name:'Yuntx_Android_Plugin_YHC_Wbss_v5.8.1.1r', ext:'aar')
+    api(name:'Yuntx_Android_Plugin_YHC_Common_v5.8.1.1r', ext:'aar')
     api 'com.github.JiangJun919690767.RongXingThirdPartySdk:plugin_meeting_sdk:v0.0.1'
 
 }
