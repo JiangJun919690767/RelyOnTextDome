@@ -38,18 +38,18 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api fileTree(include: ['*.jar','*.aar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    api(name:'Yuntx_Android_Plugin_Common_v5.8.1.1r', ext:'aar')
-    api(name:'Yuntx_Android_Plugin_Conference_v5.8.1.1r', ext:'aar')
-    api(name:'Yuntx_Android_Plugin_MarsXlog_v5.8.1.1r', ext:'aar')
-    api(name:'Yuntx_Android_Plugin_YHC_Wbss_v5.8.1.1r', ext:'aar')
-    api(name:'Yuntx_Android_Plugin_YHC_Common_v5.8.1.1r', ext:'aar')
+//    api(name:'Yuntx_Android_Plugin_Common_v5.8.1.1r', ext:'aar')
+//    api(name:'Yuntx_Android_Plugin_Conference_v5.8.1.1r', ext:'aar')
+//    api(name:'Yuntx_Android_Plugin_MarsXlog_v5.8.1.1r', ext:'aar')
+//    api(name:'Yuntx_Android_Plugin_YHC_Wbss_v5.8.1.1r', ext:'aar')
+//    api(name:'Yuntx_Android_Plugin_YHC_Common_v5.8.1.1r', ext:'aar')
     api 'com.github.JiangJun919690767.RongXingThirdPartySdk:plugin_meeting_sdk:v0.0.1'
 
 }
