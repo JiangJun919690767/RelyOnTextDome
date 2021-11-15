@@ -127,6 +127,12 @@ allprojects {
         maven { url 'https://jitpack.io' }
         maven { url 'https://developer.huawei.com/repo/' }
         maven { url 'https://maven.aliyun.com/repository/public' }
+
+        flatDir {
+            dirs'libs'
+            //把open_sdk改成你自己的module的名字
+            dirs project(':libutils').file('libs')
+        }
     }
 }
 task clean(type: Delete) {

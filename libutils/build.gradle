@@ -45,53 +45,11 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-
-    //视频缓存
-    api "${SUPPORTDEPS.videocache}"
-    api "${SUPPORTDEPS.SmartRefreshLayout}"
-    api "${SUPPORTDEPS.SmartRefreshHeader}"
-
-
-    api "${SUPPORTDEPS.kotlin_stdlib_jdk8}"
-    api "${SUPPORTDEPS.recyclerview}"
-    api "${SUPPORTDEPS.glide}"
-    api "${SUPPORTDEPS.glide_transfor}"
-    api "${SUPPORTDEPS.pinyin4j}"
-    api "${SUPPORTDEPS.gson}"
-    api "${SUPPORTDEPS.jsoup}"
-    api "${SUPPORTDEPS.rxjava}"
-    api "${SUPPORTDEPS.rxbinding}"
-    api "${SUPPORTDEPS.rxandroid}"
-    api "${SUPPORTDEPS.fastjson}"
-    api "${SUPPORTDEPS.subsamplingImage}"
-    api "${SUPPORTDEPS.rxlifecycle}"
-    api "${SUPPORTDEPS.rxlifecycle_components}"
-    api "${SUPPORTDEPS.arouter_api}"
-    api "${SUPPORTDEPS.wcdb}"
-    api "${SUPPORTDEPS.okhttpLogging}"
-    api "${SUPPORTDEPS.retrofit2}"
-    api "${SUPPORTDEPS.retrofit2Adapter}"
-    api "${SUPPORTDEPS.retrofit2Gson}"
-    api "${SUPPORTDEPS.rxlifecycle}"
-    api "${SUPPORTDEPS.rxlifecycle_components}"
-    api "${SUPPORTDEPS.eventbus}"
-    api "${SUPPORTDEPS.constraint_layout}"
-    api "${SUPPORTDEPS.multidex}"
-    api "${SUPPORTDEPS.facebook}"
-    // HUAWEI push sdk
-    api "${SUPPORTDEPS.huawei_push}"
-    api "${SUPPORTDEPS.huawei_base}"
-
-
-    api "${SUPPORTDEPS.fresco}"
-    api "${SUPPORTDEPS.fresco_gif}"
-    api "${SUPPORTDEPS.TencentLocationSdk}"
-    api "${SUPPORTDEPS.zxing}"
-    api "${SUPPORTDEPS.tablayout}"
-
-
-
-    annotationProcessor "${SUPPORTDEPS.glide_annotationProcessor}"
-    annotationProcessor "${SUPPORTDEPS.arouter_compiler}"
+    api(name:'Yuntx_Android_Plugin_Common_v5.8.1.1r', ext:'aar')
+    api(name:'Yuntx_Android_Plugin_Conference_v5.8.1.1r', ext:'aar')
+    api(name:'Yuntx_Android_Plugin_MarsXlog_v5.8.1.1r', ext:'aar')
+    api(name:'Yuntx_Android_Plugin_YHC_Wbss_v5.8.1.1r', ext:'aar')
+    api(name:'Yuntx_Android_Plugin_YHC_Common_v5.8.1.1r', ext:'aar')
+    api 'com.github.JiangJun919690767.RongXingThirdPartySdk:plugin_meeting_sdk:v0.0.1'
 
 }
